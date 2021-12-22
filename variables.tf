@@ -1,5 +1,9 @@
 # cara pemanggilan => var.NAMA_VAR / var.region
 
+variable "region" {
+  default = "ap-southeast-1"
+}
+
 variable "az" {
     default = "ap-southeast-1a"
 }
@@ -21,7 +25,7 @@ variable "instance_type" {
 }
 
 variable "my_key_name" {
-  
+  default = "~/.ssh/yusufluai.pem"
 }
 
 variable "sg" {

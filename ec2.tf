@@ -10,7 +10,7 @@ module "ec2-instance" {
   key_name               = var.my_key_name
   monitoring             = var.monitoring
   vpc_security_group_ids = [var.sg]
-  subnet_id              = var.subnet
+  subnet_id              = var.my_subnet
 
   tags = {
     Name = "${var.instance_name}-ec2-instance"
