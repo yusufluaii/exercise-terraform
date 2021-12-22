@@ -24,9 +24,6 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
-variable "my_key_name" {
-  default = "~/.ssh/yusufluai.pem"
-}
 
 variable "sg" {
   default = "sg-0650aa412761d8482"
