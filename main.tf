@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "3.70.0" # mention versi dari aws provider terraform
-    }
-  }
-}
-
 provider "aws" {
   region = var.region
 }
@@ -20,7 +11,7 @@ module "ec2-instance" {
   availability_zone             = var.az
   ami                    = var.ami_id
   instance_type          = var.instance_type
-  key_name               = file("~/.ssh/yusufluai.pem")
+  key_name               = var.my_key_name
   monitoring             = var.monitoring
   vpc_security_group_ids = [var.sg]
   subnet_id              = var.my_subnet

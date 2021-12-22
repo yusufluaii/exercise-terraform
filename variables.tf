@@ -25,7 +25,7 @@ variable "instance_type" {
 }
 
 variable "my_key_name" {
-  default = "yusufluai.pem"
+  default = "yusufluai"
 }
 
 variable "sg" {
